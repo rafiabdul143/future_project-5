@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes wave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ef4444;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Custom glow effect */
+.glow-red {
+  text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+}
+
+/* Shadow glow effects */
+.shadow-glow-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6), 0 0 40px rgba(239, 68, 68, 0.4);
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 3D Float animations */
+@keyframes float-3d {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) rotateY(0deg);
+  }
+  25% { 
+    transform: translateY(-15px) translateX(5px) rotateY(90deg);
+  }
+  50% { 
+    transform: translateY(-25px) translateX(0px) rotateY(180deg);
+  }
+  75% { 
+    transform: translateY(-15px) translateX(-5px) rotateY(270deg);
+  }
+}
+
+.animate-float-3d {
+  animation: float-3d 4s ease-in-out infinite;
+}
+
+.animate-float-3d-delayed {
+  animation: float-3d 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* 3D Spin animations */
+@keyframes spin-3d {
+  0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  33% { transform: rotateX(120deg) rotateY(120deg) rotateZ(0deg); }
+  66% { transform: rotateX(240deg) rotateY(240deg) rotateZ(120deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+.animate-spin-3d {
+  animation: spin-3d 6s linear infinite;
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Pulse 3D animation */
+@keyframes pulse-3d {
+  0%, 100% { 
+    transform: scale(1) rotateY(0deg);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.2) rotateY(180deg);
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-3d {
+  animation: pulse-3d 3s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Hologram effects */
+@keyframes hologram {
+  0% { 
+    transform: scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: scale(1.1) rotate(180deg);
+    opacity: 0.6;
+  }
+  100% { 
+    transform: scale(1) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+.animate-hologram {
+  animation: hologram 8s linear infinite;
+}
+
+.animate-hologram-reverse {
+  animation: hologram 8s linear infinite reverse;
+}
+
+/* Data stream animations */
+@keyframes data-stream {
+  0% { 
+    background-position: 0% 0%;
+    opacity: 0;
+  }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    background-position: 0% 100%;
+    opacity: 0;
+  }
+}
+
+.animate-data-stream {
+  animation: data-stream 3s ease-in-out infinite;
+}
+
+/* Sliding animations */
+@keyframes slide-horizontal {
+  0%, 100% { transform: translateX(-100px); opacity: 0; }
+  50% { transform: translateX(100px); opacity: 1; }
+}
+
+.animate-slide-horizontal {
+  animation: slide-horizontal 4s ease-in-out infinite;
+}
+
+@keyframes slide-vertical {
+  0%, 100% { transform: translateY(-100px); opacity: 0; }
+  50% { transform: translateY(100px); opacity: 1; }
+}
+
+.animate-slide-vertical {
+  animation: slide-vertical 4s ease-in-out infinite;
+}
+
+/* Grid movement */
+@keyframes grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+.animate-grid-move {
+  animation: grid-move 10s linear infinite;
+}
+
+/* Matrix rain effect */
+@keyframes matrix-rain {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+.animate-matrix-rain {
+  animation: matrix-rain 15s linear infinite;
+}
+
+/* Circuit flow animation */
+@keyframes circuit-flow {
+  0% { 
+    background-position: -100% 0%;
+    opacity: 0;
+  }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    background-position: 100% 0%;
+    opacity: 0;
+  }
+}
+
+.animate-circuit-flow {
+  animation: circuit-flow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Custom gradient text */
+.gradient-text {
+  background: linear-gradient(45deg, #ef4444, #dc2626);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover glow effect for buttons */
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.4);
+}
+
+/* Form focus states */
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+/* Custom selection */
+::selection {
+  background-color: rgba(239, 68, 68, 0.3);
+  color: #fff;
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Responsive text sizes */
+@media (max-width: 640px) {
+  .text-responsive-xl {
+    font-size: 2rem;
+  }
+  .text-responsive-2xl {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .text-responsive-xl {
+    font-size: 2.5rem;
+  }
+  .text-responsive-2xl {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .text-responsive-xl {
+    font-size: 3rem;
+  }
+  .text-responsive-2xl {
+    font-size: 4rem;
+  }
+}
